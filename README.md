@@ -1,4 +1,6 @@
+Example project for the [jbock](https://github.com/h908714124/jbock) annotation processor.
+
 <pre><code>$ mvn clean package
 $ java -jar target/cp.jar -r ~/Documents /media/archive 
-{"source":"/home/vgm/Documents", "dest":"/media/archive", "recursive":true}
+{"source":"/home/alice/Documents", "dest":"/media/archive", "recursive":true}
 </code></pre>
