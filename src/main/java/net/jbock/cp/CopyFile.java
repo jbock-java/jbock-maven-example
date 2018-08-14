@@ -31,10 +31,11 @@ public class CopyFile {
   }
 
   public static void main(String[] args) {
-    CopyFile_Args_Parser.parse(args, System.out)
-        .ifPresentOrElse(
-            CopyFile::run,
-            () -> System.exit(1));
+    Optional<Args> opt = CopyFile_Args_Parser.parse(args, System.err);
+    if (!opt.isPresent()) {
+      System.exit(1);
+    }
+    opt.ifPresent(CopyFile::run);
   }
 
   private static void run(Args args) {
