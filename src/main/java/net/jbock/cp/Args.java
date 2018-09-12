@@ -1,38 +1,52 @@
 package net.jbock.cp;
 
 import net.jbock.CommandLineArguments;
-import net.jbock.Description;
-import net.jbock.LongName;
-import net.jbock.Positional;
-import net.jbock.ShortName;
+import net.jbock.Parameter;
+import net.jbock.PositionalParameter;
 
 import java.nio.file.Path;
 import java.util.Optional;
 
+
+/**
+ * Copy SOURCE to DEST
+ */
 @CommandLineArguments(
     programName = "cp",
-    missionStatement = "copy files and directories",
-    overview = "Copy SOURCE to DEST")
+    missionStatement = "copy files and directories")
 abstract class Args {
 
-  @Positional
-  @Description("Path or file of directory to copy")
+  /**
+   * Path or file of directory to copy
+   *
+   * @return SOURCE
+   */
+  @PositionalParameter
   abstract Path source();
 
-  @Positional
-  @Description("Copy destination")
+  /**
+   * Copy destination
+   *
+   * @return DEST
+   */
+  @PositionalParameter
   abstract Path dest();
 
-  @ShortName('r')
-  @Description("copy directories recursively")
+  /**
+   * Copy directories recursively
+   */
+  @Parameter(shortName = 'r')
   abstract boolean recursive();
 
-  @ShortName('b')
-  @LongName("")
-  @Description("make a backup of each existing destination file")
+  /**
+   * Make a backup of each existing destination file
+   */
+  @Parameter(shortName = 'b', longName = "")
   abstract boolean backup();
 
-  @ShortName('S')
-  @Description("override the usual backup suffix")
+  /**
+   * Override the usual backup suffix
+   */
+  @Parameter(shortName = 's')
   abstract Optional<String> suffix();
 }
