@@ -13,23 +13,26 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jbock.version>2.5.5</jbock.version>
+    <jbock.version>2.6.0</jbock.version>
+    <jbock-annotations.version>2.2</jbock-annotations.version>
+    <jackson.version>2.9.7</jackson.version>
   </properties>
 
   <dependencies>
+
     <dependency>
       <groupId>com.github.h908714124</groupId>
-      <artifactId>jbock</artifactId>
-      <version>${jbock.version}</version>
+      <artifactId>jbock-annotations</artifactId>
+      <version>${jbock-annotations.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
     </dependency>
+
   </dependencies>
 
   <build>
