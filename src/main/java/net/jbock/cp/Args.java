@@ -39,20 +39,20 @@ abstract class Args {
    * Copy directories recursively
    */
   @JsonGetter
-  @Parameter(flag = true, shortName = 'r')
+  @Parameter(shortName = 'r')
   abstract boolean recursive();
 
   /**
    * Make a backup of each existing destination file
    */
   @JsonGetter
-  @Parameter(flag = true, shortName = 'b')
+  @Parameter(shortName = 'b')
   abstract boolean backup();
 
   /**
    * Override the usual backup suffix
    */
   @JsonGetter
-  @Parameter(optional = true, shortName = 's')
+  @Parameter(shortName = 's')
   abstract Optional<String> suffix();
 }

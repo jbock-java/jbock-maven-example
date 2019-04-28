@@ -13,7 +13,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jbock.version>2.6.5</jbock.version>
+    <jbock.version>2.6.6</jbock.version>
     <jbock-annotations.version>2.2</jbock-annotations.version>
     <jackson.version>2.9.8</jackson.version>
   </properties>
