@@ -14,7 +14,7 @@ public class CopyFile {
       .writerFor(Args.class);
 
   public static void main(String[] input) throws JsonProcessingException {
-    Args args = Args_Parser.create().parseOrExit(input);
+    Args args = Args_Parser.create().withIndent(2).parseOrExit(input);
     System.out.println(WRITER.writeValueAsString(args));
 //    Files.copy(args.source(), args.dest());
   }
