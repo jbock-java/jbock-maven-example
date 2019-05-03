@@ -1,6 +1,5 @@
 package net.jbock.cp;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
 import net.jbock.CommandLineArguments;
 import net.jbock.Parameter;
 import net.jbock.PositionalParameter;
@@ -22,37 +21,32 @@ abstract class Args {
    *
    * @return SOURCE
    */
-  @JsonGetter
   @PositionalParameter
-  abstract Path source();
+  abstract Path getSource();
 
   /**
    * Copy destination
    *
    * @return DEST
    */
-  @JsonGetter
   @PositionalParameter(position = 1)
-  abstract Path dest();
+  abstract Path getDest();
 
   /**
    * Copy directories recursively
    */
-  @JsonGetter
   @Parameter(shortName = 'r')
-  abstract boolean recursive();
+  abstract boolean isRecursive();
 
   /**
    * Make a backup of each existing destination file
    */
-  @JsonGetter
   @Parameter(shortName = 'b')
-  abstract boolean backup();
+  abstract boolean getBackup();
 
   /**
    * Override the usual backup suffix
    */
-  @JsonGetter
   @Parameter(shortName = 's')
-  abstract Optional<String> suffix();
+  abstract Optional<String> getSuffix();
 }
