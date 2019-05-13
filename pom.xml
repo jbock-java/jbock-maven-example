@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.h908714124</groupId>
-  <artifactId>jbock-gradle-example</artifactId>
+  <artifactId>jbock-maven-example</artifactId>
   <version>0-SNAPSHOT</version>
   <description>
     Example project for the jbock annotation processor.
@@ -13,7 +13,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jbock.version>2.6.9</jbock.version>
+    <jbock.version>2.7.0</jbock.version>
     <jbock-annotations.version>2.2</jbock-annotations.version>
     <jackson.version>2.9.8</jackson.version>
   </properties>
@@ -86,3 +86,4 @@
     </plugins>
   </build>
 </project>
+

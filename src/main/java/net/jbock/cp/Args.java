@@ -35,18 +35,18 @@ abstract class Args {
   /**
    * Copy directories recursively
    */
-  @Parameter(shortName = 'r')
+  @Parameter(shortName = 'r', longName = "recursive")
   abstract boolean isRecursive();
 
   /**
    * Make a backup of each existing destination file
    */
-  @Parameter(shortName = 'b')
+  @Parameter(shortName = 'b', longName = "backup")
   abstract boolean getBackup();
 
   /**
    * Override the usual backup suffix
    */
-  @Parameter(shortName = 's')
+  @Parameter(shortName = 's', longName = "suffix")
   abstract Optional<String> getSuffix();
 }
