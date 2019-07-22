@@ -13,9 +13,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jbock.version>2.7.1</jbock.version>
+    <jbock.version>2.7.2</jbock.version>
     <jbock-annotations.version>2.2</jbock-annotations.version>
-    <jackson.version>2.9.8</jackson.version>
   </properties>
 
   <dependencies>
@@ -27,17 +26,6 @@
       <scope>provided</scope>
     </dependency>
 
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-jdk8</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
   </dependencies>
 
   <build>

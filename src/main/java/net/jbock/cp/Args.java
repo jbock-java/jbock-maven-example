@@ -6,6 +6,7 @@ import net.jbock.PositionalParameter;
 
 import java.nio.file.Path;
 import java.util.Optional;
+import java.util.StringJoiner;
 
 
 /**
@@ -49,4 +50,16 @@ abstract class Args {
    */
   @Parameter(shortName = 's', longName = "suffix")
   abstract Optional<String> getSuffix();
+
+
+  @Override
+  public String toString() {
+    return new StringJoiner(",\n  ", "{\n  ", "\n}")
+        .add("source: " + getSource())
+        .add("dest: " + getDest())
+        .add("recursive: " + isRecursive())
+        .add("backup: " + getBackup())
+        .add("suffix: " + getSuffix())
+        .toString();
+  }
 }
