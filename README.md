@@ -1,17 +1,47 @@
-Example project for the [jbock](https://github.com/h908714124/jbock) annotation processor.
+# jbock-maven-example
 
-<pre><code>$ mvn clean package
-$ java -jar target/cp.jar -r ~/Documents /media/archive 
-{"source":"/home/alice/Documents", "dest":"/media/archive", "recursive":true}
-$ java -jar target/cp.jar --help
-</code></pre>
+[![core](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock/badge.svg?style=plastic&subject=jbock)](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock)
+[![annotations](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock-annotations/badge.svg?color=red&style=plastic&subject=jbock-annotations)](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock-annotations)
 
-Or [compile to native](https://github.com/oracle/graal/releases) first:
+The annotations are not needed at runtime, so the scope can be `optional`
+or `provided`.
 
-````sh
-mvn package
-native-image --no-fallback -jar target/cp.jar cp
-./cp -r ~/Documents /media/archive
-./cp --help
+````xml
+<dependency>
+  <groupId>com.github.h908714124</groupId>
+  <artifactId>jbock-annotations</artifactId>
+  <version>${jbock.annotations.version}</version>
+  <scope>provided</scope>
+</dependency>
 ````
 
+[jbock](https://github.com/h908714124/jbock)
+is an annotation processor, so it is only needed
+on the compiler classpath:
+
+````xml
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <configuration>
+        <annotationProcessorPaths>
+          <dependency>
+            <groupId>com.github.h908714124</groupId>
+            <artifactId>jbock</artifactId>
+            <version>${jbock.version}</version>
+          </dependency>
+        </annotationProcessorPaths>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+````
+
+### Try it out
+
+````sh
+mvn clean package
+java -jar target/cp.jar -r ~/Documents /media/archive
+````
