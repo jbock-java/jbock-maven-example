@@ -43,7 +43,7 @@ abstract class Args {
      * Make a backup of each existing destination file
      */
     @Parameter(shortName = 'b', longName = "backup")
-    abstract boolean getBackup();
+    abstract boolean isBackup();
 
     /**
      * Override the usual backup suffix
