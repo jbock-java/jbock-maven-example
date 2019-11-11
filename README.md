@@ -39,7 +39,7 @@ on the compiler classpath:
 </build>
 ````
 
-### Try it out
+### Try it
 
 ````sh
 mvn clean package
