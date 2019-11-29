@@ -10,46 +10,44 @@ import java.nio.file.Path;
 import java.util.Optional;
 import java.util.StringJoiner;
 
-
 /**
  * Copy SOURCE to DEST
  */
-@CommandLineArguments(
-        programName = "cp",
-        missionStatement = "copy files and directories")
+@CommandLineArguments(programName = "cp")
 abstract class Args {
 
     /**
      * Path or file of directory to copy
      * @return SOURCE
      */
-    @PositionalParameter
+    @PositionalParameter(1)
     abstract Path getSource();
 
     /**
      * Copy destination
      * @return DEST
      */
-    @PositionalParameter(position = 1)
+    @PositionalParameter(2)
     abstract Path getDest();
 
     /**
      * Copy directories recursively
      */
-    @Parameter(shortName = 'r', longName = "recursive")
+    @Parameter(mnemonic = 'r', value = "recursive")
     abstract boolean isRecursive();
 
     /**
      * Make a backup of each existing destination file
      */
-    @Parameter(shortName = 'b', longName = "backup")
+    @Parameter(mnemonic = 'b', value = "backup")
     abstract boolean isBackup();
 
     /**
      * Override the usual backup suffix
      */
-    @Parameter(shortName = 's', longName = "suffix")
+    @Parameter(mnemonic = 's', value = "suffix")
     abstract Optional<String> getSuffix();
+
 
     @Override
     public String toString() {
