@@ -1,8 +1,8 @@
 package net.jbock.cp;
 
-import net.jbock.CommandLineArguments;
-import net.jbock.Parameter;
-import net.jbock.PositionalParameter;
+import net.jbock.Command;
+import net.jbock.Option;
+import net.jbock.Param;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -13,39 +13,39 @@ import java.util.StringJoiner;
 /**
  * Copy SOURCE to DEST
  */
-@CommandLineArguments(programName = "cp")
+@Command("cp")
 abstract class Args {
 
     /**
      * Path or file of directory to copy
      * @return SOURCE
      */
-    @PositionalParameter(1)
+    @Param(1)
     abstract Path getSource();
 
     /**
      * Copy destination
      * @return DEST
      */
-    @PositionalParameter(2)
+    @Param(2)
     abstract Path getDest();
 
     /**
      * Copy directories recursively
      */
-    @Parameter(mnemonic = 'r', value = "recursive")
+    @Option(value = "recursive", mnemonic = 'r')
     abstract boolean isRecursive();
 
     /**
      * Make a backup of each existing destination file
      */
-    @Parameter(mnemonic = 'b', value = "backup")
+    @Option(value = "backup", mnemonic = 'b')
     abstract boolean isBackup();
 
     /**
      * Override the usual backup suffix
      */
-    @Parameter(mnemonic = 's', value = "suffix")
+    @Option(value = "suffix", mnemonic = 's')
     abstract Optional<String> getSuffix();
 
 

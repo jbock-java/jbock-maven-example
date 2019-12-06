@@ -13,8 +13,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jbock.version>3.0.3</jbock.version>
-    <jbock-annotations.version>3.2</jbock-annotations.version>
+    <jbock-annotations.version>3.4</jbock-annotations.version>
+    <jbock.version>3.4</jbock.version>
   </properties>
 
   <dependencies>
