@@ -42,6 +42,6 @@ on the compiler classpath:
 ### Try it
 
 ````sh
-mvn clean package
+./mvnw clean package
 java -jar target/cp.jar -r ~/Documents /media/archive
 ````
