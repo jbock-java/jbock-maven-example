@@ -10,8 +10,8 @@ or `provided`.
 <dependency>
   <groupId>com.github.h908714124</groupId>
   <artifactId>jbock-annotations</artifactId>
-  <version>${jbock.annotations.version}</version>
-  <scope>provided</scope>
+  <version>3.6</version>
+  <optional>true</optional>
 </dependency>
 ````
 
@@ -30,7 +30,7 @@ on the compiler classpath:
           <dependency>
             <groupId>com.github.h908714124</groupId>
             <artifactId>jbock</artifactId>
-            <version>${jbock.version}</version>
+            <version>3.6.001</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>

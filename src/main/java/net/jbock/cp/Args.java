@@ -20,14 +20,14 @@ abstract class Args {
      * Path or file of directory to copy
      * @return SOURCE
      */
-    @Param(1)
+    @Param(0)
     abstract Path getSource();
 
     /**
      * Copy destination
      * @return DEST
      */
-    @Param(2)
+    @Param(1)
     abstract Path getDest();
 
     /**
