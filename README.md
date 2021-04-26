@@ -1,8 +1,5 @@
 # jbock-maven-example
 
-[![core](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock/badge.svg?style=plastic&subject=jbock)](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock)
-[![annotations](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock-annotations/badge.svg?color=red&style=plastic&subject=jbock-annotations)](https://maven-badges.herokuapp.com/maven-central/com.github.h908714124/jbock-annotations)
-
 The annotations are not needed at runtime, so the scope can be `optional`
 or `provided`.
 
@@ -30,7 +27,7 @@ on the compiler classpath:
           <dependency>
             <groupId>com.github.h908714124</groupId>
             <artifactId>jbock</artifactId>
-            <version>3.6.002</version>
+            <version>3.6.003</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>
