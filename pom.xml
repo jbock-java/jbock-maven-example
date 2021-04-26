@@ -33,13 +33,13 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>11</source>
-          <target>11</target>
+          <source>8</source>
+          <target>8</target>
           <annotationProcessorPaths>
             <dependency>
               <groupId>com.github.h908714124</groupId>
               <artifactId>jbock</artifactId>
-              <version>3.6.002</version>
+              <version>3.6.003</version>
             </dependency>
           </annotationProcessorPaths>
         </configuration>
