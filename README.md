@@ -27,7 +27,7 @@ on the compiler classpath:
           <dependency>
             <groupId>com.github.h908714124</groupId>
             <artifactId>jbock</artifactId>
-            <version>3.6.005</version>
+            <version>3.6.006</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>
