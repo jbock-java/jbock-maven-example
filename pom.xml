@@ -20,11 +20,21 @@
     <dependency>
       <groupId>com.github.h908714124</groupId>
       <artifactId>jbock-annotations</artifactId>
-      <version>3.6</version>
+      <version>4.0</version>
       <optional>true</optional>
     </dependency>
 
+    <dependency>
+      <groupId>org.jline</groupId>
+      <artifactId>jline</artifactId>
+      <version>3.20.0</version>
+    </dependency>
+
   </dependencies>
+
+  <repositories>
+    <repository><id>central</id><url>https://repo.maven.apache.org/maven2</url></repository>
+  </repositories>
 
   <build>
     <plugins>
@@ -39,7 +49,7 @@
             <dependency>
               <groupId>com.github.h908714124</groupId>
               <artifactId>jbock</artifactId>
-              <version>3.6.006</version>
+              <version>4.0.000</version>
             </dependency>
           </annotationProcessorPaths>
         </configuration>
