@@ -40,5 +40,5 @@ on the compiler classpath:
 
 ````sh
 ./mvnw clean package
-java -jar target/cp.jar -r ~/Documents /media/archive
+java -jar target/cp.jar --help
 ````
