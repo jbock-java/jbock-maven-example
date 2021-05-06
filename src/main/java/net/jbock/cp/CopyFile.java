@@ -1,16 +1,17 @@
 package net.jbock.cp;
 
 import org.jline.terminal.TerminalBuilder;
+import picocli.CommandLine;
 
 import java.io.IOException;
 
 public class CopyFile {
 
-    public static void main(String[] input) throws IOException {
+    public static void main(String[] args) throws IOException {
         int width = TerminalBuilder.terminal().getWidth();
-        Args args = new Args_Parser()
-                .withTerminalWidth(width)
-                .parseOrExit(input);
-        System.out.println(args);
+        int exitCode = new CommandLine(new Args())
+                .setUsageHelpWidth(width)
+                .execute(args);
+        System.exit(exitCode);
     }
 }
