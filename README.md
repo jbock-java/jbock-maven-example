@@ -40,5 +40,5 @@ on the compiler classpath:
 
 ````sh
 ./mvnw clean package
-java --module-path target/jbock-maven-example-0-SNAPSHOT.jar:target/lib/jline-3.20.0.jar:target/lib/jbock-annotations-4.2.jar --module jbock.maven.example
+./cp --help
 ````
