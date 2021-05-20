@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+./mvnw clean package
+MODULE_PATH=target/jbock-maven-example-0-SNAPSHOT.jar
+for JAR in `find target/lib/ -name "*.jar"`; do
+       MODULE_PATH="${MODULE_PATH}:${JAR}"
+done
+mkdir out
+jlink --module-path $MODULE_PATH --add-modules jbock.maven.example --output out
+
