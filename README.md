@@ -7,7 +7,7 @@ or `provided`.
 <dependency>
   <groupId>com.github.h908714124</groupId>
   <artifactId>jbock-annotations</artifactId>
-  <version>4.2</version>
+  <version>4.3</version>
   <optional>true</optional>
 </dependency>
 ````
@@ -40,5 +40,6 @@ on the compiler classpath:
 
 ````sh
 ./mvnw clean package
+./package
 ./cp --help
 ````
