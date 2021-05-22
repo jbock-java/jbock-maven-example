@@ -46,5 +46,6 @@ on the compiler classpath:
 
 ### See also
 
+* [jbock](https://github.com/h908714124/jbock)
 * [jbock-gradle-example](https://github.com/h908714124/jbock-gradle-example)
 
