@@ -13,7 +13,7 @@ or `provided`.
 ````
 
 [jbock](https://github.com/h908714124/jbock)
-is an annotation processor, so it is only needed
+is an annotation processor, so it is needed
 on the compiler classpath:
 
 ````xml
