@@ -43,3 +43,8 @@ on the compiler classpath:
 ./package
 ./cp --help
 ````
+
+### See also
+
+* [jbock-gradle-example](https://github.com/h908714124/jbock-gradle-example)
+
