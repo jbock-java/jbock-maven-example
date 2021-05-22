@@ -55,7 +55,6 @@
         <configuration>
           <archive>
             <manifest>
-              <addClasspath>true</addClasspath>
               <mainClass>net.jbock.cp.CopyFile</mainClass>
             </manifest>
           </archive>
@@ -64,7 +63,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.1.2</version>
         <executions>
           <execution>
             <phase>package</phase>
