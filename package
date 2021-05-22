@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
-MODULE_PATH=target/jbock-maven-example-0-SNAPSHOT.jar
+MODULE_PATH=target/jbock-maven-example-1.jar
 for JAR in `find target/lib -name "*.jar"`; do
   MODULE_PATH="${MODULE_PATH}:${JAR}"
 done
 rm -rf out
 jpackage --name cp --type app-image --module-path "$MODULE_PATH" --module jbock.maven.example --dest out
 
+#create launcher script
+echo '#!/usr/bin/env bash' >>cp
+EXECUTABLE=`find out -type f -name cp`
+echo "$EXECUTABLE" '$@' >>cp
+chmod +x cp

@@ -6,7 +6,7 @@
 
   <groupId>com.github.h908714124</groupId>
   <artifactId>jbock-maven-example</artifactId>
-  <version>0-SNAPSHOT</version>
+  <version>1</version>
   <description>
     Maven sample project for the jbock annotation processor.
   </description>
