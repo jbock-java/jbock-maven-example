@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
-MODULE_PATH=target/jbock-maven-example-1.jar
-for JAR in `find target/lib -name "*.jar"`; do
-  MODULE_PATH="${MODULE_PATH}:${JAR}"
+join_tokens () {
+  local IFS=:
+  echo "$*"
+}
+
+JARS=()
+for JAR in `find target -name "*.jar"`; do
+  JARS+=("${JAR}")
 done
+MODULE_PATH=`join_tokens ${JARS[@]}`
 rm -rf out
-jpackage --name cp --type app-image --module-path "$MODULE_PATH" --module jbock.maven.example --dest out
+jpackage --name cp --type app-image --module-path $MODULE_PATH --module jbock.maven.example --dest out
 
 #create launcher script
-echo '#!/usr/bin/env bash' >>cp
+echo '#!/usr/bin/env bash' >cp
 EXECUTABLE=`find out -type f -name cp`
 echo "$EXECUTABLE" '$@' >>cp
 chmod +x cp
