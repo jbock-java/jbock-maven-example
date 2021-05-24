@@ -20,7 +20,7 @@
     <dependency>
       <groupId>com.github.h908714124</groupId>
       <artifactId>jbock-annotations</artifactId>
-      <version>4.3</version>
+      <version>4.4</version>
       <optional>true</optional>
     </dependency>
 
@@ -43,7 +43,7 @@
             <dependency>
               <groupId>com.github.h908714124</groupId>
               <artifactId>jbock</artifactId>
-              <version>4.3.002</version>
+              <version>4.4.000</version>
             </dependency>
           </annotationProcessorPaths>
         </configuration>
