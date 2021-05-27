@@ -12,7 +12,7 @@ or `provided`.
 </dependency>
 ````
 
-[jbock](https://github.com/h908714124/jbock)
+[jbock](https://github.com/jbock-java/jbock)
 is an annotation processor, so it is needed
 on the compiler classpath:
 
@@ -40,7 +40,9 @@ on the compiler classpath:
 
 ````sh
 ./mvnw clean package
-./package
+jpackage --name cp --type app-image --module-path `./get_module_path` --module jbock.maven.example/net.jbock.cp.CopyFile --dest target/out
+./create_launcher_script >cp
+chmod +x cp
 ./cp --help
 ````
 
