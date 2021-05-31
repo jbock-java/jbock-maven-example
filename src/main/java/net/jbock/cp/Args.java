@@ -2,7 +2,9 @@ package net.jbock.cp;
 
 import picocli.CommandLine;
 
+import java.lang.reflect.Field;
 import java.nio.file.Path;
+import java.util.StringJoiner;
 
 /**
  * Copy SOURCE to DEST
@@ -60,6 +62,15 @@ class Args implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("running " + getClass().getName());
+        StringJoiner joiner = new StringJoiner(",\n  ", "{\n  ", "\n}");
+        Field[] fields = getClass().getDeclaredFields();
+        for (Field field : fields) {
+            try {
+                joiner.add(field.getName() + ": " + field.get(this));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+        System.out.println(joiner);
     }
 }
