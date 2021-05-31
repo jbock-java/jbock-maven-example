@@ -2,8 +2,10 @@ package net.jbock.cp;
 
 import com.beust.jcommander.Parameter;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class Args {
 
@@ -21,4 +23,18 @@ public class Args {
 
     @Parameter(names = "--help", help = true)
     boolean help;
+
+    @Override
+    public String toString() {
+        StringJoiner joiner = new StringJoiner(",\n  ", "{\n  ", "\n}");
+        Field[] fields = getClass().getDeclaredFields();
+        for (Field field : fields) {
+            try {
+                joiner.add(field.getName() + ": " + field.get(this));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return joiner.toString();
+    }
 }
