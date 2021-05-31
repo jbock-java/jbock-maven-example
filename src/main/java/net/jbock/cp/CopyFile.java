@@ -8,6 +8,7 @@ public class CopyFile {
         Args jct = new Args();
         JCommander jCommander = JCommander.newBuilder()
                 .addObject(jct)
+                .expandAtSign()
                 .build();
         jCommander.parse(args);
 
