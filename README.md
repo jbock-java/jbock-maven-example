@@ -1,20 +1,16 @@
 # jbock-maven-example
 
-The annotations are not needed at runtime, so the scope can be `optional`
-or `provided`.
+Add this to `pom.xml`:
 
 ````xml
 <dependency>
-  <groupId>com.github.h908714124</groupId>
-  <artifactId>jbock-annotations</artifactId>
-  <version>4.4</version>
-  <optional>true</optional>
+  <groupId>io.github.jbock-java</groupId>
+  <artifactId>jbock</artifactId>
+  <version>5.0</version>
 </dependency>
 ````
 
-[jbock](https://github.com/jbock-java/jbock)
-is an annotation processor, so it is needed
-on the compiler classpath:
+Then configure the annotation processor path:
 
 ````xml
 <build>
@@ -25,9 +21,9 @@ on the compiler classpath:
       <configuration>
         <annotationProcessorPaths>
           <dependency>
-            <groupId>com.github.h908714124</groupId>
-            <artifactId>jbock</artifactId>
-            <version>4.4.000</version>
+            <groupId>io.github.jbock-java</groupId>
+            <artifactId>jbock-compiler</artifactId>
+            <version>5.0</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>

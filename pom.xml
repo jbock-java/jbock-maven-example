@@ -18,16 +18,16 @@
   <dependencies>
 
     <dependency>
-      <groupId>com.github.h908714124</groupId>
-      <artifactId>jbock-annotations</artifactId>
-      <version>4.4</version>
-      <optional>true</optional>
+      <groupId>io.github.jbock-java</groupId>
+      <artifactId>jbock</artifactId>
+      <version>5.0</version>
     </dependency>
 
   </dependencies>
 
   <repositories>
     <repository><id>central</id><url>https://repo.maven.apache.org/maven2</url></repository>
+    <repository><id>test</id><url>https://s01.oss.sonatype.org/content/repositories/iogithubjbock-java-1003</url></repository>
   </repositories>
 
   <build>
@@ -41,9 +41,9 @@
           <target>11</target>
           <annotationProcessorPaths>
             <dependency>
-              <groupId>com.github.h908714124</groupId>
-              <artifactId>jbock</artifactId>
-              <version>4.4.000</version>
+              <groupId>io.github.jbock-java</groupId>
+              <artifactId>jbock-compiler</artifactId>
+              <version>5.0</version>
             </dependency>
           </annotationProcessorPaths>
         </configuration>
