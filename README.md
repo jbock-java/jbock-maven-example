@@ -44,6 +44,6 @@ chmod +x cp
 
 ### See also
 
-* [jbock](https://github.com/h908714124/jbock)
-* [jbock-gradle-example](https://github.com/h908714124/jbock-gradle-example)
+* [jbock](https://github.com/jbock-java/jbock)
+* [jbock-gradle-example](https://github.com/jbock-java/jbock-gradle-example)
 
