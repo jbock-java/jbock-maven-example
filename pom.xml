@@ -27,7 +27,6 @@
 
   <repositories>
     <repository><id>central</id><url>https://repo.maven.apache.org/maven2</url></repository>
-    <repository><id>test</id><url>https://s01.oss.sonatype.org/content/repositories/iogithubjbock-java-1003</url></repository>
   </repositories>
 
   <build>
