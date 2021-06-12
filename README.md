@@ -32,6 +32,12 @@ Then configure the annotation processor path:
 </build>
 ````
 
+If you use the module system, add this line in your `module-info.java`:
+
+````java
+requires net.jbock;
+````
+
 ### Try it
 
 ````sh
