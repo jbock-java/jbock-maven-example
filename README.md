@@ -6,7 +6,7 @@ Add this to `pom.xml`:
 <dependency>
   <groupId>io.github.jbock-java</groupId>
   <artifactId>jbock</artifactId>
-  <version>5.0</version>
+  <version>5.1</version>
 </dependency>
 ````
 
@@ -23,7 +23,7 @@ Then configure the annotation processor path:
           <dependency>
             <groupId>io.github.jbock-java</groupId>
             <artifactId>jbock-compiler</artifactId>
-            <version>5.0</version>
+            <version>5.1</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>
@@ -43,9 +43,9 @@ requires net.jbock;
 ````sh
 ./mvnw clean package
 jpackage --name cp --type app-image --module-path `./get_module_path` --module jbock.maven.example/net.jbock.cp.CopyFile --dest target/out
-./create_launcher_script >cp
-chmod +x cp
+./create_launcher_script >cp && chmod +x cp
 ./cp --help
+./cp 1 -s 2 2
 ````
 
 ### See also

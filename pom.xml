@@ -20,7 +20,7 @@
     <dependency>
       <groupId>io.github.jbock-java</groupId>
       <artifactId>jbock</artifactId>
-      <version>5.0</version>
+      <version>5.1</version>
     </dependency>
 
   </dependencies>
@@ -42,7 +42,7 @@
             <dependency>
               <groupId>io.github.jbock-java</groupId>
               <artifactId>jbock-compiler</artifactId>
-              <version>5.0</version>
+              <version>5.1</version>
             </dependency>
           </annotationProcessorPaths>
         </configuration>
