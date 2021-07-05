@@ -7,9 +7,7 @@
   <groupId>io.github.jbock.sample</groupId>
   <artifactId>jbock-maven-example</artifactId>
   <version>1</version>
-  <description>
-    Maven sample project for the jbock annotation processor.
-  </description>
+  <description>jbock maven sample</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,7 +18,7 @@
     <dependency>
       <groupId>io.github.jbock-java</groupId>
       <artifactId>jbock</artifactId>
-      <version>5.1</version>
+      <version>5.2</version>
     </dependency>
 
   </dependencies>
@@ -42,7 +40,7 @@
             <dependency>
               <groupId>io.github.jbock-java</groupId>
               <artifactId>jbock-compiler</artifactId>
-              <version>5.1</version>
+              <version>5.2</version>
             </dependency>
           </annotationProcessorPaths>
         </configuration>

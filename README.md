@@ -1,16 +1,16 @@
 # jbock-maven-example
 
-Add this to `pom.xml`:
+Add this dependency:
 
 ````xml
 <dependency>
   <groupId>io.github.jbock-java</groupId>
   <artifactId>jbock</artifactId>
-  <version>5.1</version>
+  <version>5.2</version>
 </dependency>
 ````
 
-Then configure the annotation processor path:
+Then configure the annotation processor:
 
 ````xml
 <build>
@@ -23,7 +23,7 @@ Then configure the annotation processor path:
           <dependency>
             <groupId>io.github.jbock-java</groupId>
             <artifactId>jbock-compiler</artifactId>
-            <version>5.1</version>
+            <version>5.2</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>
@@ -32,7 +32,7 @@ Then configure the annotation processor path:
 </build>
 ````
 
-If you use the module system, add this line in your `module-info.java`:
+Add this to `module-info.java`:
 
 ````java
 requires net.jbock;
