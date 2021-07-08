@@ -38,7 +38,7 @@ Add this to `module-info.java`:
 requires net.jbock;
 ````
 
-### Try it
+### Run it
 
 ````sh
 ./mvnw clean package
