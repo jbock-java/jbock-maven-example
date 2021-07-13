@@ -6,7 +6,7 @@ Add this dependency:
 <dependency>
   <groupId>io.github.jbock-java</groupId>
   <artifactId>jbock</artifactId>
-  <version>5.4</version>
+  <version>5.5</version>
 </dependency>
 ````
 
@@ -23,7 +23,7 @@ Then configure the annotation processor:
           <dependency>
             <groupId>io.github.jbock-java</groupId>
             <artifactId>jbock-compiler</artifactId>
-            <version>5.4</version>
+            <version>5.5</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>
