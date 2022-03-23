@@ -6,7 +6,7 @@ Add this dependency:
 <dependency>
   <groupId>io.github.jbock-java</groupId>
   <artifactId>jbock</artifactId>
-  <version>5.12</version>
+  <version>5.13</version>
 </dependency>
 ````
 
@@ -23,7 +23,7 @@ Then configure the annotation processor:
           <dependency>
             <groupId>io.github.jbock-java</groupId>
             <artifactId>jbock-compiler</artifactId>
-            <version>5.12</version>
+            <version>5.13</version>
           </dependency>
         </annotationProcessorPaths>
       </configuration>
@@ -45,7 +45,7 @@ requires net.jbock;
 jpackage --name cp --type app-image --module-path `./get_module_path` --module jbock.maven.example/net.jbock.cp.CopyFile --dest target/out
 ./create_launcher_script >cp && chmod +x cp
 ./cp --help
-./cp 1 -s 2 2
+./cp 1 -s2 2
 ````
 
 ### See also
