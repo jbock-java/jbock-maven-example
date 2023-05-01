@@ -6,7 +6,7 @@ Add this dependency:
 <dependency>
   <groupId>io.github.jbock-java</groupId>
   <artifactId>jbock</artifactId>
-  <version>5.14</version>
+  <version>5.16</version>
 </dependency>
 ````
 
