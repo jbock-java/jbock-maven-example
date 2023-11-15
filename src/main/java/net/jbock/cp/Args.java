@@ -47,20 +47,4 @@ abstract class Args {
      */
     @Option(names = {"--suffix", "-s"})
     abstract Optional<String> suffix();
-
-    @Override
-    public String toString() {
-        StringJoiner joiner = new StringJoiner(",\n  ", "{\n  ", "\n}");
-        Method[] methods = getClass().getSuperclass().getDeclaredMethods();
-        for (Method method : methods) {
-            if (Modifier.isAbstract(method.getModifiers())) {
-                try {
-                    joiner.add(method.getName() + ": " + method.invoke(this));
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-        return joiner.toString();
-    }
 }
