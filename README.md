@@ -42,8 +42,7 @@ requires net.jbock;
 
 ````sh
 ./mvnw clean package
-jpackage --name cp --type app-image --module-path `./get_module_path` --module jbock.maven.example/net.jbock.cp.CopyFile --dest target/out
-./create_launcher_script >cp && chmod +x cp
+./mvnw dependency:copy-dependencies -DincludeScope=runtime
 ./cp --help
 ./cp 1 -s2 2
 ````

@@ -5,8 +5,7 @@ join_tokens () {
 }
 
 JARS=()
-for JAR in `find target -name "*.jar"`; do
+for JAR in target/*.jar target/dependency/*.jar; do
   JARS+=("${JAR}")
 done
-MODULE_PATH=`join_tokens ${JARS[@]}`
-echo "$MODULE_PATH"
+join_tokens ${JARS[@]}
