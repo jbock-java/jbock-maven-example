@@ -10,7 +10,7 @@ class ArgsTest {
 
     @Test
     void testPrint() {
-        Args result = new ArgsParser().parse(List.of("1", "2", "-rbs12")).getRight().orElseThrow();
-        assertEquals("{recursive: true, backup: true, suffix: Optional[12], source: 1, dest: 2}", result.toString());
+        Args result = ArgsParser.parse(List.of("1", "2", "-rbs12")).getRight().orElseThrow();
+        assertEquals("{ recursive: true, backup: true, suffix: Optional[12], source: 1, dest: 2 }", result.toString());
     }
 }
